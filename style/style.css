@@ -46,7 +46,7 @@ a{
 
 /* header */
 #main-title{
-    color: #ea5b8d;
+    color: #e63b76;
     text-align: center;
 }
 
@@ -86,3 +86,6 @@ a{
     font-weight: 600;
 }
 
+.card-role{
+    margin: 5px 0;
+}
