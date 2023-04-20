@@ -6,7 +6,67 @@
     padding: 0;
 }
 
+
+/* I'm giving an height (the same height) to both the card and the image
+because if something unexpected happens (like a really really long name) it
+would brake only the single card, and not the entire layout */
+:root{
+    --card-height: 100px;
+}
+
 body{
     font-family: "fredoka";
+}
+
+/* utilities */
+a{
+    text-decoration: none;
+    color: #5ab2cc;
+}
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.mg-ver-50{
+    margin:50px 0;
+}
+
+.float-left{
+    float: left;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* header */
+#main-title{
+    color: #ea5b8d;
+    text-align: center;
+}
+
+/* cards */
+
+.card{
+    background-color: black;
+    color: white;
+    height: var(--card-height);
+    width: calc(100% / 3);    
+}
+
+.card-picture{
+    height: var(--card-height);
+    padding-right: 10px;
+}
+
+.card-infos{
+    margin: 15px 0;
+}
+
+.card-name{
+    font-weight: bolder;
 }
 
