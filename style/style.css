@@ -7,11 +7,13 @@
 }
 
 
-/* I'm giving an height (the same height) to both the card and the image
-because if something unexpected happens (like a really really long name) it
-would brake only the single card, and not the entire layout */
 :root{
+    /* I'm giving an height (the same height) to both the card and the image
+    because if something unexpected happens (like a really really long name) it
+    would break only the single card, and not the entire layout */
     --card-height: 100px;
+    /* mgn-btw-cards is used to space cards between each other */
+    --mgn-btw-cards: 10px;
 }
 
 body{
@@ -48,18 +50,32 @@ a{
     text-align: center;
 }
 
+.team-description{
+    text-align: center;
+}
+
 /* cards */
+
+.cards-wrapper{
+    /* formula used to get negative values */
+    margin-left: calc(var(--mgn-btw-cards) * -1);
+    margin-right: calc(var(--mgn-btw-cards) * -1);
+}
 
 .card{
     background-color: black;
     color: white;
-    height: var(--card-height);
-    width: calc(100% / 3);    
+    /* I'm giving an height (the same height) to both the card and the image
+    because if something unexpected happens (like a really really long name) it
+    would braek only the single card, and not the entire layout */
+    height: var(--card-height); 
+    width: calc(100% / 3 - 2 * (var(--mgn-btw-cards)));
+    margin: 10px var(--mgn-btw-cards);
 }
 
 .card-picture{
+    margin-right: 10px;    
     height: var(--card-height);
-    padding-right: 10px;
 }
 
 .card-infos{
@@ -67,6 +83,6 @@ a{
 }
 
 .card-name{
-    font-weight: bolder;
+    font-weight: 600;
 }
 
